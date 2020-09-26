@@ -7,9 +7,9 @@ export default class Item extends Component {
     
     render() {
         return (
-            <div class="alert alert-warning alert-dismissible" role="alert" style={this.alertSize}>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span class="glyphicon glyphicon-trash">&times;</span>
+            <div className="alert alert-warning alert-dismissible" role="alert" style={this.alertSize}>
+            <button type="button" className="close" data-dismiss="alert" aria-label="Close">
+                <span className="glyphicon glyphicon-trash">&times;</span>
             </button>
             <strong>Warning!</strong> Better check yourself, you're not looking too good.
             </div>
