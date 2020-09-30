@@ -28,12 +28,19 @@ export default class Items extends Component {
         this.setState({ identifier });
     }
     
+    handleDelete = deleteId => {
+        const items = this.state.items.filter(i => i.id !== deleteId);
+        this.setState({ items });
+        console.log("Removed ", deleteId);
+    }
+    
     render() {
         return (
             //Have a component that is a button and pass createNew as an attribute to it
             <div>
                 <Edit onAdd={this.createNew} />
-                {this.state.items.map(item => <Item key={item.id} />)};
+                {this.state.items.map(item => <Item key={item.id} id={item.id}
+                      onDelete={this.handleDelete}/>)};
             </div>
             );
     }
